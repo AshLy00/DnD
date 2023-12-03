@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="base.css" />
+    <link rel="stylesheet" href="part-one.css" />
+    <link rel="stylesheet" href="part-two.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="./script.js" defer></script>
+    <title>D&D</title>
+  </head>
+  <body>
+    <header>
+      <h1>FICHA DE PERSONAJE</h1>
+    </header>
+    <main>
+      <form id="formulario_dnd">
+        <section>
+          <div id="part-one">
+            <div class="img-wrapper">
+              <div id="imageContainer">
+                <img id="uploadedImage" src="#" alt="" />
+              </div>
+
+              <input
+                type="file"
+                id="imageInput"
+                accept="image/*"
+                onchange="loadImage(event)"
+              />
+            </div>
+            <div class="text-bar">
+              <input name="Personaje" type="text" />
+              <label>NOMBRE DEL PERSONAJE</label>
+            </div>
+            <div class="text-bar">
+              <input name="Jugador" type="text" />
+              <label> NOMBRE DEL JUGADOR</label>
+            </div>
+            <div class="text-bar">
+              <select name="Trasfondo">
+                <option>ELIGE TU TRASFONDO</option>
+                <option>CIRCENSE</option>
+                <option>ACÓLITO</option>
+                <option>ANIMADOR</option>
+                <option>ARTESANO GREMIAL</option>
+                <option>CHARLATÁN</option>
+                <option>CRIMINAL</option>
+                <option>ERMITAÑO</option>
+                <option>ERUDITO</option>
+                <option>HÉROE DEL PLUEBLO</option>
+                <option>HUÉRFANO</option>
+                <option>MARINERO</option>
+                <option>NOBLE</option>
+                <option>SALVAJE</option>
+                <option>SOLDADO</option>
+                <option>ESPADACHÍN</option>
+              </select>
+              <label>TRASFONDO</label>
+            </div>
+            <div class="text-bar">
+              <select name="Raza">
+                <option>ELIGE TU RAZA</option>
+                <option>DRACÓNIDO</option>
+                <option>ELFO</option>
+                <option>ENANO</option>
+                <option>GNOMO</option>
+                <option>HUMANO</option>
+                <option>MEDIANO</option>
+                <option>SEMIELFO</optio>
+                <option>SEMIORCO</option>
+                <option>TIEFLING</option>
+              </select>
+              <label>RAZA</label>
+            </div>
+            <div class="text-bar">
+              <select name="Clase">
+                <option>ELIGE TU CLASE Y NIVEL</option>
+                <option>BÁRBARO LvL 1</option>
+                <option>BARDO LvL 1</option>
+                <option>BRUJO LvL 1</option>
+                <option>CLÉRIGO LvL 1</option>
+                <option>DRUIDA LvL 1</option>
+                <option>EXPLORADOR LvL 1</option>
+                <option>GUERRERO LvL 1</option>
+                <option>HECHICERO LvL 1</option>
+                <option>MAGO LvL 1</option>
+                <option>MONJE LvL 1</option>
+                <option>PALADÍN LvL 1</option>
+                <option>PICARO LvL 1</option>
+              </select>
+              <label>CLASE Y NIVEL</label>
+            </div>
+            <div class="text-bar">
+              <select>
+                <option>ELIGE ALINEAMIENTO</option>
+                <option>LEGAL BUENO</option>
+                <option>NEUTRO BUENO</option>
+                <option>CAÓTICO BUENO</option>
+                <option>LEGAL NEUTRAL</option>
+                <option>NEUTRAL</option>
+                <option>CAÓTICO NEUTRAL</option>
+                <option>LEGAL MALIGNO</option>
+                <option>NEUTRAL MALIGNO</option>
+                <option>CAÓTICO MALIGNO</option>
+              </select>
+              <label>ALINEAMIENTO</label>
+            </div>
+            <div class="text-bar">
+              <input type="text" maxlength="3" name="Puntos"/>
+              <label>PUNTOS DE EXPERIENCIA</label>
+            </div>
+            <div class="box-container">
+              <div class="text-box">
+                <label>CLASE DE ARMADURA</label>
+                <input type="text" maxlength="2" name="Armadura"/>
+              </div>
+              <div class="text-box">
+                <label>INICIATIVA</label>
+                <input type="text" maxlength="2" name="Iniciativa"/>
+              </div>
+              <div class="text-box">
+                <label >VELOCIDAD</label>
+                <input type="text" maxlength="2" name="Velocidad"/>
+              </div>
+              <div class="text-box">
+                <label>BONIFICADOR</label>
+                <input type="text" maxlength="2" name="Bonificador" />
+              </div>
+              <div class="text-box">
+                <label>INSPIRACIÓN</label>
+                <input type="text" maxlength="2" name="Inspiracion"/>
+              </div>
+              <div class="text-box">
+                <label>PERCEPCIÓN</label>
+                <input type="text" maxlength="2" name="Percepcion"/>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section>
+          <div id="part-two">
+            <div class="habilidades-container">
+              <div>
+                <div class="text-box2">
+                  <label>FUERZA</label>
+                  <input type="text" maxlength="2" name="Fuerza"/>
+                </div>
+                <div class="circle">
+                  <input type="text" maxlength="2" name="FuerzaModificador"/>
+                </div>
+              </div>
+              <div>
+                <div class="text-box2">
+                  <label>DESTREZA</label>
+                  <input type="text" maxlength="2" />
+                </div>
+                <div class="circle">
+                  <input type="text" maxlength="2" />
+                </div>
+              </div>
+              <div>
+                <div class="text-box2">
+                  <label>CONSTITUCIÓN</label>
+                  <input type="text" maxlength="2" />
+                </div>
+                <div class="circle">
+                  <input type="text" maxlength="2" />
+                </div>
+              </div>
+              <div>
+                <div class="text-box2">
+                  <label>INTELIGENCIA</label>
+                  <input type="text" maxlength="2" />
+                </div>
+                <div class="circle">
+                  <input type="text" maxlength="2" />
+                </div>
+              </div>
+              <div>
+                <div class="text-box2">
+                  <label for="name">SABIDURIA</label>
+                  <input type="text" maxlength="2" />
+                </div>
+                <div class="circle">
+                  <input type="text" maxlength="2" />
+                </div>
+              </div>
+              <div>
+                <div class="text-box2">
+                  <label for="name">CARISMA</label>
+                  <input type="text" maxlength="2" />
+                </div>
+                <div class="circle">
+                  <input type="text" maxlength="2" />
+                </div>
+              </div>
+            </div>
+            <div class="rellenar">
+              <div class="text-box3">
+                <label for="name">RASGOS DE PERSONALIDAD</label>
+                <textarea cols="50" rows="50" maxlength="300"></textarea>
+              </div>
+            </div>
+            <div class="rellenar">
+              <div class="text-box3">
+                <label for="name">IDEALES</label>
+                <textarea cols="50" rows="50" maxlength="300"></textarea>
+              </div>
+            </div>
+            <div class="rellenar">
+              <div class="text-box3">
+                <label for="name">VINCULOS</label>
+                <textarea cols="50" rows="50" maxlength="300"></textarea>
+              </div>
+            </div>
+            <div class="rellenar">
+              <div class="text-box3">
+                <label for="name">DEFECTOS</label>
+                <textarea cols="50" rows="50" maxlength="300"></textarea>
+              </div>
+            </div>
+            <div class="radio">
+              <div class="text-box4">
+                <label
+                  ><input type="checkbox" name="salvacion" />
+                  <input type="text" maxlength="2" />FUERZA</label
+                >
+                <label
+                  ><input type="checkbox" name="salvacion" />
+                  <input type="text" maxlength="2" />DESTREZA</label
+                >
+                <label
+                  ><input type="checkbox" name="salvacion" />
+                  <input type="text" maxlength="2" />CONSTITUCIÓN</label
+                >
+                <label
+                  ><input type="checkbox" name="salvacion" />
+                  <input type="text" maxlength="2" />INTELIGENCIA</label
+                >
+                <label
+                  ><input type="checkbox" name="salvacion" />
+                  <input type="text" maxlength="2" />SABIDURIA</label
+                >
+                <label
+                  ><input type="checkbox" name="salvacion" />
+                  <input type="text" maxlength="2" />CARISMA</label
+                >
+                <label class="center" for="name">TIRADAS DE SALVACIÓN</label>
+              </div>
+            </div>
+            <div class="radio2">
+              <div class="text-box4">
+                <label
+                  ><input type="radio" />
+                  <input type="text" maxlength="2" />ACROBACIAS</label
+                >
+                <label
+                  ><input type="radio" />
+                  <input type="text" maxlength="2" />ATLETISMO</label
+                >
+                <label
+                  ><input type="radio" /> <input type="text" maxlength="2" />C.
+                  ARCANO</label
+                >
+                <label
+                  ><input type="radio" />
+                  <input type="text" maxlength="2" />ENGAÑO</label
+                >
+                <label
+                  ><input type="radio" />
+                  <input type="text" maxlength="2" />HISTORIA</label
+                >
+                <label
+                  ><input type="radio" />
+                  <input type="text" maxlength="2" />INTERPRETACIÓN</label
+                >
+                <label
+                  ><input type="radio" />
+                  <input type="text" maxlength="2" />INTIMIDACIÓN</label
+                >
+                <label
+                  ><input type="radio" />
+                  <input type="text" maxlength="2" />INVESTIGACIÓN</label
+                >
+                <label
+                  ><input type="radio" />
+                  <input type="text" maxlength="2" />JUEGO DE MANOS</label
+                >
+                <label
+                  ><input type="radio" />
+                  <input type="text" maxlength="2" />MEDICINA</label
+                >
+                <label
+                  ><input type="radio" />
+                  <input type="text" maxlength="2" />NATURALEZA</label
+                >
+                <label
+                  ><input type="radio" />
+                  <input type="text" maxlength="2" />PERCEPCIÓN</label
+                >
+                <label
+                  ><input type="radio" />
+                  <input type="text" maxlength="2" />PERSPICACIA</label
+                >
+                <label
+                  ><input type="radio" />
+                  <input type="text" maxlength="2" />PERSUACIÓN</label
+                >
+                <label
+                  ><input type="radio" />
+                  <input type="text" maxlength="2" />RELIGIÓN</label
+                >
+                <label
+                  ><input type="radio" />
+                  <input type="text" maxlength="2" />SIGILO</label
+                >
+                <label
+                  ><input type="radio" />
+                  <input type="text" maxlength="2" />SUPERVIVENCIA</label
+                >
+                <label
+                  ><input type="radio" /> <input type="text" maxlength="2" />T.
+                  CON ANIMALES</label
+                >
+                <label class="center" for="name">HABILIDADES</label>
+              </div>
+            </div>
+          </div>
+          <button type="submit" value="submit">ENVIAR</button>
+        </section>
+      </form>
+      <footer>
+        <div>
+          <button onclick="imprimirPDF()">
+            <img src="./Print.png" alt="" />
+          </button>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>
